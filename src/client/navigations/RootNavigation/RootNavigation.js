@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
-import { HomePage } from '../../pages';
+import { Header } from '../../components';
+import { HomePage, AboutPage, NotFoundPage } from '../../pages';
 
 class RootNavigation extends Component {
     render() {
         return(
             <div>
-                <Route path='/' component={HomePage} />
+                <Header />
+                <Switch>
+                    <Route exact path='/' component={HomePage} />
+                    <Route path='/about' component={AboutPage} />
+                    <Route path='/hotel/:id' component={HomePage} />
+                    <Route path='*' component={NotFoundPage} />
+                </Switch>
             </div>
         );
     }

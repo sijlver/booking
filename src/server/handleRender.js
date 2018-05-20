@@ -32,6 +32,9 @@ const handleRender = (req, res) => {
     );
     const html = renderToString(app);
 
+    if (context.url) {
+        return res.redirect(context.url);
+    }
     res.send(render(html));
 };
 

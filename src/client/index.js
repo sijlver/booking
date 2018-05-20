@@ -1,12 +1,12 @@
 import React from 'react';
-import { hydrate } from 'react-dom';
+import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import { RootNavigation } from './navigations';
 import store from './store';
 
-hydrate((
+render((
     <Provider store={store}>
         <Router>
             <RootNavigation />
