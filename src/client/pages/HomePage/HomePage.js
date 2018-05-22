@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 
-class HomePage extends Component {
-    render() {
-        return (
-            <p>Home Page</p>
-        );
-    }
+import FilterPanel from './components/FilterPanel';
+import ListHotels from './components/ListHotels';
+
+function HomePage() {
+    return (
+        <div>
+            <FilterPanel />
+            <ListHotels />
+        </div>
+    );
 }
 
-const mapStateToProps = state => ({
-});
-
-const mapActionToProps = dispatch => ({
-});
-
-export default connect(mapStateToProps, mapActionToProps)(HomePage);
+export default HomePage;

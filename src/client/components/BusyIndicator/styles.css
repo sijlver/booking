@@ -1,0 +1,17 @@
+.busyIndicator{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -20px;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border-top-color: transparent;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	box-shadow: 2px 2px 1px rgb(0,0,0);
+	animation: busyIndicator 690ms infinite linear;
+}
+@keyframes busyIndicator{
+	100%{ transform: rotate(360deg); transform: rotate(360deg); }
+}

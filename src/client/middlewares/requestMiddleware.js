@@ -1,11 +1,13 @@
+import { hotelsConstants } from '../constants';
+
 const requestMiddleware = ({ dispatch }) => next => (action) => {
     switch (action.type) {
-    case 'REQUEST_LIST_PLAYERS': {
-        const url = 'http://ergast.com/api/f1/drivers.json';
+    case hotelsConstants.REQUEST_LIST_HOTELS: {
+        const url = 'http://engine.hotellook.com/api/v2/lookup.json?query=moscow&lang=en&lookFor=both';
 
         fetch(url)
             .then((oData) => oData.json())
-            .then((oData) => dispatch({ type: 'RECEIVED_LIST_PLAYERS', payload: { listPlayers: oData.MRData.DriverTable.Drivers }}));
+            .then((oData) => dispatch({ type: hotelsConstants.RECEIVED_HOTELS, payload: { listHotels: oData.results.hotels }}));
     }
     default: {}
     }

@@ -1,11 +1,9 @@
 import { combineReducers } from 'redux';
 
-import loginReducer from './loginReducer';
-import checkboxReducer from './checkboxReducer';
-import listPlayersReducer from './listPlayersReducer';
+import hotelsReducer from './hotelsReducer';
+import commonReducer from './commonReducer';
 
 export default combineReducers({
-    loginReducer,
-    checkboxReducer,
-    listPlayersReducer,
+    hotelsReducer,
+    commonReducer,
 });
