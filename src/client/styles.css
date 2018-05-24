@@ -1,0 +1,29 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+}
+
+ul, p {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+}
+
+main {
+    height: calc(100vh - 6rem);
+    margin-bottom: 3rem; 
+}

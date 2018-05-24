@@ -1,18 +1,14 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 
-class AboutPage extends Component {
-    render() {
-        return (
-            <p>About Page</p>
-        );
-    }
+import './styles.css';
+
+function AboutPage() {
+    return (
+        <div className='aboutPageMainContent'>
+            <h1>About Page</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id neque in mauris imperdiet molestie. Fusce nunc turpis, lobortis scelerisque sagittis eget, scelerisque at nisi. Integer viverra lectus felis, sed laoreet erat cursus et. Integer purus purus, rhoncus at orci in, aliquet sollicitudin massa. Curabitur rutrum arcu non ante consequat, ac scelerisque augue auctor. Praesent vehicula eu quam eu commodo. Aenean vitae tellus velit. Pellentesque nisl leo, pretium non maximus eget, interdum eget enim. Maecenas feugiat a quam vel aliquam. Vestibulum porttitor justo nec metus ultrices, quis sollicitudin augue varius. Donec eu pulvinar est. Sed id arcu vel nisi sodales auctor. Morbi in dolor risus. Vivamus sed augue dignissim, egestas turpis a, tincidunt dui. Nunc at augue nulla. Sed iaculis sollicitudin quam id dictum. Nulla lacus tortor, fermentum sed nulla vel, pulvinar volutpat lectus. Morbi varius nibh arcu, id hendrerit dui malesuada non. In sit amet ultrices mauris, ut pretium massa. Nunc elementum semper nunc eget maximus. Maecenas aliquet dignissim magna et commodo. Etiam non vulputate ligula. In sagittis, lacus vitae facilisis eleifend, neque libero semper nisl, non dictum mi elit id nunc. Nulla pharetra at neque at posuere. Nulla pharetra tempor justo, nec euismod massa. Sed sagittis auctor ipsum. Curabitur luctus tortor nec enim auctor pellentesque. Suspendisse tincidunt eget velit sed luctus. Phasellus id diam eu orci accumsan elementum. Donec purus neque, fringilla et aliquet vitae, placerat eget nulla. Cras eget maximus justo. Morbi vitae urna varius, hendrerit urna nec, sagittis dui. Pellentesque egestas, eros quis lacinia consequat, tellus elit iaculis arcu, quis fringilla tortor quam a diam. Maecenas odio dolor, varius sit amet magna at, pharetra vestibulum nibh. Mauris suscipit condimentum enim, at condimentum diam tincidunt at. Nunc ultrices accumsan dui in feugiat. Nulla fermentum urna sem, nec pharetra tortor porttitor eget. Nam at ultrices tellus, nec porta eros. Pellentesque ut eros sit amet tortor tincidunt fermentum sit amet a est. Suspendisse eleifend finibus elementum. Etiam venenatis arcu in suscipit cursus. Aliquam interdum, dui vitae pharetra commodo, tellus diam semper erat, nec tempor arcu turpis nec libero. Donec nec vehicula felis. Sed a urna in nulla euismod sagittis non in nunc. Suspendisse viverra quam et urna malesuada, in pretium felis maximus. Mauris eu leo non ex commodo hendrerit sit amet et arcu. Aliquam consequat fringilla imperdiet. Mauris sodales nisi nec faucibus elementum. Curabitur bibendum ligula id lectus luctus, vitae dapibus arcu tincidunt. Integer at magna a dolor pharetra facilisis. Nullam consectetur orci et lorem porttitor molestie. Aliquam pellentesque mauris sed risus tempor, eget pretium tortor venenatis. Duis magna dolor, accumsan tempor convallis eget, aliquet hendrerit nulla. Quisque et leo quis libero scelerisque egestas. Mauris euismod tincidunt nunc. Cras condimentum arcu sed erat dapibus lobortis. Vestibulum rhoncus ex et mauris dictum pulvinar quis quis leo. Fusce dignissim, diam vel tincidunt consectetur, eros quam aliquet justo, at bibendum risus urna eget lacus. Nam nibh odio, cursus in lacinia in, condimentum sit amet erat. Quisque tincidunt, orci at tempor efficitur, augue odio fermentum dui, quis viverra tellus.</p>
+        </div>
+    )
 }
 
-const mapStateToProps = state => ({
-});
-
-const mapActionToProps = dispatch => ({
-});
-
-export default connect(mapStateToProps, mapActionToProps)(AboutPage);
+export default AboutPage;

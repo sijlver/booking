@@ -7,7 +7,8 @@ import { BusyIndicator } from '../../components';
 
 class HotelPage extends Component {
     componentDidMount() {
-        const { match: { params: { id } }, requestHotelInformation } = this.props;
+        const { match: { params: { id }, location: { search } }, requestHotelInformation } = this.props;
+        const searchParams = new URLSearchParams(search);
 
         requestHotelInformation(id);
     }

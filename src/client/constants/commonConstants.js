@@ -1,2 +1,1 @@
 export const BUSY_INDICATOR = 'BUSY_INDICATOR';
-export const REQUEST_FAILURE = 'REQUEST_FAILURE';

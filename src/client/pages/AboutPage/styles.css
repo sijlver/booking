@@ -1,0 +1,12 @@
+.aboutPageMainContent {
+    padding: 0 3rem;
+}
+
+.aboutPageMainContent > p {
+    font-size: 1.7rem;
+}
+
+.aboutPageMainContent > h1 {
+    font-size: 3rem;
+    text-align: center;
+}

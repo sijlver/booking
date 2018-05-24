@@ -11,12 +11,6 @@ const commonReducer = (state = initialState, action) => {
 
         return {...state, busyIndicator };
     }
-    case commonConstants.REQUEST_FAILURE: {
-        const { requestFailure } = action.payload;
-
-        console.log(requestFailure);
-        return state;
-    }
     default: {
         return state;
     }

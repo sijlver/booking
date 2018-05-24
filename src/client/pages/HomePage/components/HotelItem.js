@@ -6,9 +6,11 @@ function HotelItem(props) {
     const { id, locationName, label } = props;
 
     return (
-        <li>
-            <NavLink to={`/hotel/${id}`}>{label}</NavLink>
-            <h3>{locationName}</h3>
+        <li className='hotelItem'>
+            <NavLink to={`/hotel/${id}`} className='hotelItemLink'>
+                <p className='hotelItemName'>{label}</p>
+                <p className='hotelItemCityName'>{locationName}</p>
+            </NavLink>
         </li>
     );
 }
