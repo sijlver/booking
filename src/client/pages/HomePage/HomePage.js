@@ -51,4 +51,5 @@ const mapActionToProps = dispatch => ({
     },
 });
 
+export { HomePage };
 export default connect(mapStateToProps, mapActionToProps)(HomePage);

@@ -1,0 +1,192 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomePage should render self 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <HomePage
+    busyIndicator={true}
+    dateEnd="11-12-1991"
+    dateStart="10-08-1991"
+    limit="10"
+    listHotels={
+      Array [
+        Object {
+          "key": "1",
+          "label": "SelimVseh\\" Apartment at Shchorsa",
+        },
+      ]
+    }
+    requestListHotels={[MockFunction]}
+    searchName="searchName"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <FilterPanel
+          dateEnd="11-12-1991"
+          dateStart="10-08-1991"
+          limit="10"
+          requestListHotels={[MockFunction]}
+          searchName="searchName"
+        />,
+        <ListHotels
+          listHotels={
+            Array [
+              Object {
+                "key": "1",
+                "label": "SelimVseh\\" Apartment at Shchorsa",
+              },
+            ]
+          }
+        />,
+        <BusyIndicator
+          show={true}
+        />,
+      ],
+      "className": "mainContent",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "dateEnd": "11-12-1991",
+          "dateStart": "10-08-1991",
+          "limit": "10",
+          "requestListHotels": [MockFunction],
+          "searchName": "searchName",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "listHotels": Array [
+            Object {
+              "key": "1",
+              "label": "SelimVseh\\" Apartment at Shchorsa",
+            },
+          ],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "show": true,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <FilterPanel
+            dateEnd="11-12-1991"
+            dateStart="10-08-1991"
+            limit="10"
+            requestListHotels={[MockFunction]}
+            searchName="searchName"
+          />,
+          <ListHotels
+            listHotels={
+              Array [
+                Object {
+                  "key": "1",
+                  "label": "SelimVseh\\" Apartment at Shchorsa",
+                },
+              ]
+            }
+          />,
+          <BusyIndicator
+            show={true}
+          />,
+        ],
+        "className": "mainContent",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "dateEnd": "11-12-1991",
+            "dateStart": "10-08-1991",
+            "limit": "10",
+            "requestListHotels": [MockFunction],
+            "searchName": "searchName",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "listHotels": Array [
+              Object {
+                "key": "1",
+                "label": "SelimVseh\\" Apartment at Shchorsa",
+              },
+            ],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "show": true,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

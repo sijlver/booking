@@ -7,8 +7,7 @@ import { BusyIndicator } from '../../components';
 
 class HotelPage extends Component {
     componentDidMount() {
-        const { match: { params: { id }, location: { search } }, requestHotelInformation } = this.props;
-        const searchParams = new URLSearchParams(search);
+        const { match: { params: { id } }, requestHotelInformation } = this.props;
 
         requestHotelInformation(id);
     }
@@ -27,7 +26,6 @@ class HotelPage extends Component {
 HotelPage.propTypes = {
     hotelInformation:  PropTypes.shape({
         label: PropTypes.string,
-        locationName: PropTypes.string,
     }),
     busyIndicator:  PropTypes.bool,
 };
@@ -43,4 +41,5 @@ const mapActionToProps = dispatch => ({
     },
 });
 
+export { HotelPage };
 export default connect(mapStateToProps, mapActionToProps)(HotelPage);
