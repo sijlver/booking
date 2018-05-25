@@ -6,7 +6,7 @@ const initialState = {
     searchName: '',
     dateStart: helperFunction.changeFormatDate(new Date()),
     dateEnd: helperFunction.changeFormatDate(new Date(), 1),
-    limit: 10,
+    limit: '10',
     listHotels: [],
     hotelInformation: {},
 };

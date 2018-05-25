@@ -9,7 +9,7 @@ class FilterPanel extends Component {
         searchName: '',
         dateStart: '',
         dateEnd: '',
-        limit: 0,
+        limit: '',
         minStartDate: helperFunction.changeFormatDate(new Date()),
         minEndDate: helperFunction.changeFormatDate(new Date(), 1),
     }
@@ -81,7 +81,7 @@ FilterPanel.propTypes = {
     searchName: PropTypes.string,
     dateStart: PropTypes.string,
     dateEnd: PropTypes.string,
-    limit: PropTypes.number,
+    limit: PropTypes.string,
 };
 
 export default FilterPanel;

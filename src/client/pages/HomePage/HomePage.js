@@ -31,7 +31,7 @@ HomePage.propTypes = {
     searchName: PropTypes.string,
     dateStart: PropTypes.string,
     dateEnd: PropTypes.string,
-    limit: PropTypes.number,
+    limit: PropTypes.string,
     busyIndicator: PropTypes.bool,
     requestListHotels: PropTypes.func,
 };
