@@ -1,4 +1,4 @@
-import { hotelsConstants, commonConstants } from '../constants';
+import { hotelsConstants } from '../constants';
 import { hotelsActions } from '../actions';
 import helperFunction from '../utils';
 

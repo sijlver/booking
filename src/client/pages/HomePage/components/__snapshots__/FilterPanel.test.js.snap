@@ -5,8 +5,8 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <FilterPanel
-    dateEnd="11-12-1991"
-    dateStart="10-08-1991"
+    dateEnd="2018-05-29"
+    dateStart="2018"
     limit="10"
     requestListHotels={[MockFunction]}
     searchName="searchName"
@@ -33,19 +33,19 @@ ShallowWrapper {
         />,
         <Field
           className="startDateField"
-          min="2018-05-25"
+          min="2018-05-28"
           name="dateStart"
           onChange={[Function]}
           type="date"
-          value="10-08-1991"
+          value="2018"
         />,
         <Field
           className="endDateField"
-          min="2018-05-26"
+          min="2018-05-29"
           name="dateEnd"
           onChange={[Function]}
           type="date"
-          value="11-12-1991"
+          value="2018-05-29"
         />,
         <Field
           max="10"
@@ -88,11 +88,11 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "className": "startDateField",
-          "min": "2018-05-25",
+          "min": "2018-05-28",
           "name": "dateStart",
           "onChange": [Function],
           "type": "date",
-          "value": "10-08-1991",
+          "value": "2018",
         },
         "ref": null,
         "rendered": null,
@@ -104,11 +104,11 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "className": "endDateField",
-          "min": "2018-05-26",
+          "min": "2018-05-29",
           "name": "dateEnd",
           "onChange": [Function],
           "type": "date",
-          "value": "11-12-1991",
+          "value": "2018-05-29",
         },
         "ref": null,
         "rendered": null,
@@ -162,19 +162,19 @@ ShallowWrapper {
           />,
           <Field
             className="startDateField"
-            min="2018-05-25"
+            min="2018-05-28"
             name="dateStart"
             onChange={[Function]}
             type="date"
-            value="10-08-1991"
+            value="2018"
           />,
           <Field
             className="endDateField"
-            min="2018-05-26"
+            min="2018-05-29"
             name="dateEnd"
             onChange={[Function]}
             type="date"
-            value="11-12-1991"
+            value="2018-05-29"
           />,
           <Field
             max="10"
@@ -217,11 +217,11 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "className": "startDateField",
-            "min": "2018-05-25",
+            "min": "2018-05-28",
             "name": "dateStart",
             "onChange": [Function],
             "type": "date",
-            "value": "10-08-1991",
+            "value": "2018",
           },
           "ref": null,
           "rendered": null,
@@ -233,11 +233,11 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "className": "endDateField",
-            "min": "2018-05-26",
+            "min": "2018-05-29",
             "name": "dateEnd",
             "onChange": [Function],
             "type": "date",
-            "value": "11-12-1991",
+            "value": "2018-05-29",
           },
           "ref": null,
           "rendered": null,

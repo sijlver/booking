@@ -1,6 +1,7 @@
 import React from 'react';
-import AboutPage from './AboutPage';
 import { shallow } from "enzyme";
+
+import AboutPage from './AboutPage';
 
 describe('AboutPage', () => {
     it('should render self', () => {

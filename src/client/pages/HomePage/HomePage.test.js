@@ -1,7 +1,8 @@
 import React from 'react';
-import { HomePage } from './HomePage';
 import { shallow  } from "enzyme";
 import jest from 'jest-mock';
+
+import { HomePage } from './HomePage';
 
 describe('HomePage', () => {
     it('should render self', () => {

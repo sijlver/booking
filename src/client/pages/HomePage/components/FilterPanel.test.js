@@ -3,20 +3,27 @@ import { shallow  } from "enzyme";
 import jest from 'jest-mock';
 
 import FilterPanel from './FilterPanel';
+import helperFunction from '../../../utils';
 
 describe('FilterPanel', () => {
     it('should render self', () => {
-        const props = {
-            searchName: 'searchName',
-            dateStart: '10-08-1991',
-            dateEnd: '11-12-1991',
-            limit: '10',
-            requestListHotels: jest.fn()
-        };
+        const oDate = new Date();
+        const searchName = 'searchName';
+        const dateStart = '2018';
+        const dateEnd = "2018-05-29";
+        const limit = '10';
+        const requestListHotels = jest.fn();
+        const props = { searchName, dateStart, dateEnd, limit, requestListHotels };
         const wrapper = shallow (
             <FilterPanel {...props} />
         );
+        wrapper.setState({
+            minStartDate: "2018-05-28",
+            minEndDate: "2018-05-29",
+        });
 
         expect(wrapper).toMatchSnapshot();
+        wrapper.simulate('submit', { preventDefault: jest.fn() });
+        wrapper.find('Field').at(1).simulate('change', { target: { name: 'dateStart', value: 'dateStart' } });
     });
 });

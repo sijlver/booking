@@ -1,6 +1,7 @@
 import React from 'react';
-import NotFoundPage from './NotFoundPage';
 import { shallow } from "enzyme";
+
+import NotFoundPage from './NotFoundPage';
 
 describe('NotFoundPage', () => {
     it('should render self', () => {

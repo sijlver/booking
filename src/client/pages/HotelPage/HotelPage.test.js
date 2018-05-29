@@ -1,7 +1,8 @@
 import React from 'react';
-import { HotelPage } from './HotelPage';
 import { mount  } from "enzyme";
 import jest from 'jest-mock';
+
+import { HotelPage } from './HotelPage';
 
 describe('HotelPage', () => {
     it('should render self', () => {

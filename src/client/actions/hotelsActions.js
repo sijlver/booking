@@ -9,7 +9,7 @@ function getListHotels(city, dateStart, dateEnd, limit) {
 
         dispatch(setBusyIndicator(true));
         dispatch(changeFilterNames(city, dateStart, dateEnd, limit));
-        fetch(url)
+        return fetch(url)
             .then(helperFunctions.checkStatusError)
             .then((oData) => oData.json())
             .then((oData) => {
@@ -36,7 +36,7 @@ function getHotelInformation(id) {
         const url = `${hotelsConstants.URL_HOTELS}?query=${id}&lang=en`;
 
         dispatch(setBusyIndicator(true));
-        fetch(url)
+        return fetch(url)
             .then(helperFunctions.checkStatusError)
             .then((oData) => oData.json())
             .then((oData) => {
@@ -56,4 +56,4 @@ function changeFilterNames(searchName, dateStart, dateEnd, limit) {
     return { type: hotelsConstants.CHANGE_FILTER_NAMES, payload: { searchName, dateStart, dateEnd, limit }};
 };
 
-export { getListHotels, getHotelInformation };
+export { getListHotels, getHotelInformation, receivedListHotels, receivedHotelInformation, changeFilterNames };

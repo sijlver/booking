@@ -17,10 +17,7 @@ function changeFormatDate(date, dayDiff=0) {
     if (month < 10) {
         month = `0${month}`;
     }
-    if (day < 10) {
-        day = `${day}`;
-    }
     return `${year}-${month}-${day}`;
 }
 
-export { checkStatusError, changeFormatDate };
+export { checkStatusError, changeFormatDate, checkType };

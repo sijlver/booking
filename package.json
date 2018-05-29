@@ -27,9 +27,11 @@
     "eslint-loader": "^2.0.0",
     "eslint-plugin-react": "^7.7.0",
     "html-webpack-plugin": "3.2.0",
+    "isomorphic-fetch": "^2.2.1",
     "jest": "^23.0.0",
     "jest-css-modules": "^1.1.0",
     "prop-types": "^15.6.1",
+    "redux-mock-store": "^1.5.1",
     "style-loader": "0.20.3",
     "webpack": "4.6.0",
     "webpack-cli": "^2.0.15",
@@ -52,6 +54,8 @@
   },
   "jest": {
     "setupTestFrameworkScriptFile": "./enzyme.config.js",
-    "transform": {".*": "<rootDir>/node_modules/jest-css-modules"}
+    "transform": {
+      ".*": "<rootDir>/node_modules/jest-css-modules"
+    }
   }
 }

@@ -1,7 +1,8 @@
 import React from 'react';
-import Field from './Field';
 import { shallow  } from "enzyme";
 import jest from 'jest-mock';
+
+import Field from './Field';
 
 describe('Field', () => {
     it('should render self', () => {

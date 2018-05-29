@@ -1,6 +1,7 @@
 import React from 'react';
-import BusyIndicator from './BusyIndicator';
 import { mount  } from "enzyme";
+
+import BusyIndicator from './BusyIndicator';
 
 describe('BusyIndicator', () => {
     it('should render self', () => {
