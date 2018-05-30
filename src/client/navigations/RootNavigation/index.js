@@ -1,3 +1,4 @@
 import RootNavigation from './RootNavigation';
+import routes from './routes';
 
-export default RootNavigation;
+export { RootNavigation, routes };

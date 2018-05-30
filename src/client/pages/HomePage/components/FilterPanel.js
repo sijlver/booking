@@ -13,7 +13,7 @@ class FilterPanel extends Component {
         minStartDate: helperFunction.changeFormatDate(new Date()),
         minEndDate: helperFunction.changeFormatDate(new Date(), 1),
     }
-    componentDidMount() {
+    componentWillMount() {
         const { searchName, dateStart, dateEnd, limit } = this.props;
 
         this.setState({ searchName, dateStart, dateEnd, limit });

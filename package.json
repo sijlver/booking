@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
+    "server": "nodemon ./src/server/index.js --exec babel-node",
     "test": "jest --coverage",
     "test:watch": "npm test -- --watch",
     "build": "webpack --mode=production"
@@ -31,6 +32,7 @@
     "jest": "^23.0.0",
     "jest-css-modules": "^1.1.0",
     "prop-types": "^15.6.1",
+    "react-router-config": "^1.0.0-beta.4",
     "redux-mock-store": "^1.5.1",
     "style-loader": "0.20.3",
     "webpack": "4.6.0",

@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import { matchRoutes } from 'react-router-config';
 import 'isomorphic-fetch';
 
+import { routes } from '../client/navigations';
 import store from '../client/store';
-import { RootNavigation } from '../client/navigations';
+import App from '../client/App';
 
 const render = (html) => (
     `<!DOCTYPE html>
@@ -22,20 +24,33 @@ const render = (html) => (
 );
 
 const handleRender = (req, res) => {
-    const context = {};
-    const app = (
-        <Provider store={store}>
-            <Router location={req.url} context={context}>
-                <RootNavigation />
-            </Router>
-        </Provider>
-    );
-    const html = renderToString(app);
+    const branch = matchRoutes(routes, req.url);
+    const promises = branch.map(({ route, match }) => {
+        const { fetchData } = route.component;
 
-    if (context.url) {
-        return res.redirect(context.url);
-    }
-    res.send(render(html));
+        if (!(fetchData instanceof Function)) {
+            return Promise.resolve(null);
+        }
+        return fetchData(store.dispatch, match);
+    });
+
+    return Promise.all(promises)
+        .then(() => {
+            const context = {};
+            const app = (
+                <Provider store={store}>
+                    <Router location={req.url} context={context}>
+                        <App />
+                    </Router>
+                </Provider>
+            );
+            const html = renderToString(app);
+
+            if (context.url) {
+                return res.redirect(context.url);
+            }
+            res.send(render(html));
+        });
 };
 
 export default handleRender;

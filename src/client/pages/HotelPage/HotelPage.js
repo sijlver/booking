@@ -6,7 +6,7 @@ import { hotelsActions } from '../../actions';
 import { BusyIndicator } from '../../components';
 
 class HotelPage extends Component {
-    componentDidMount() {
+    componentWillMount() {
         const { match: { params: { id } }, requestHotelInformation } = this.props;
 
         requestHotelInformation(id);
@@ -28,6 +28,10 @@ HotelPage.propTypes = {
         label: PropTypes.string,
     }),
     busyIndicator:  PropTypes.bool,
+};
+
+HotelPage.fetchData = (dispatch, match) => {
+    return dispatch(hotelsActions.getHotelInformation(match.params.id))
 };
 
 const mapStateToProps = state => ({

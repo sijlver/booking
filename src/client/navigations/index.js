@@ -1,3 +1,3 @@
-import RootNavigation from './RootNavigation';
+import { RootNavigation, routes } from './RootNavigation';
 
-export { RootNavigation };
+export { RootNavigation, routes };
