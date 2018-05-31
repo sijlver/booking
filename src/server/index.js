@@ -1,16 +1,18 @@
 import express from 'express';
 import path from 'path';
 import webpack from 'webpack';
-import middleware from 'webpack-dev-middleware';
+import webpackDevMiddleware from 'webpack-dev-middleware';
+import webpackHotMiddleware from 'webpack-hot-middleware';
+import webpackConfig from '../../webpack.config';
 
-// import webpackConfig from '../../webpack.config.config-dev-ssr.js';
 import handleRender from './handleRender';
 
 const port = 8080;
 const server = express();
-// const compiler = webpack(webpackConfig);
+const compiler = webpack(webpackConfig);
 
-// server.use(webpack(compiler, {}));
+server.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: webpackConfig.output.publicPath }));
+server.use(webpackHotMiddleware(compiler));
 server.use(express.static('public'));
 server.get('/index.js', (req, res) => {
     res.sendFile(path.join(__dirname, '../../built/index.js'));
