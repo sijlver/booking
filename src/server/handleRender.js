@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
@@ -15,15 +15,16 @@ const render = (html) => (
        <head>
           <meta charset="UTF-8">
           <title>App</title>
+          ${process.env.NODE_ENV === 'development' ? '' : '<link href="/css/main.css" rel="stylesheet" type="text/css">'}
        </head>
        <body>
           <div id="app">${html}</div>
-          <script src="index.js"></script>
+          <script src="/js/main.js"></script>
        </body>
     </html>`
 );
 
-const handleRender = (req, res) => {
+const handleRender = () => (req, res) => {
     const branch = matchRoutes(routes, req.url);
     const promises = branch.map(({ route, match }) => {
         const { fetchData } = route.component;

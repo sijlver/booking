@@ -27,3 +27,7 @@ main {
     height: calc(100vh - 6rem);
     margin-bottom: 3rem; 
 }
+
+p {
+    font-size: 1.5rem;
+}

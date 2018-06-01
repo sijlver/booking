@@ -1,23 +1,25 @@
-import express from 'express';
-import path from 'path';
-import webpack from 'webpack';
-import webpackDevMiddleware from 'webpack-dev-middleware';
-import webpackHotMiddleware from 'webpack-hot-middleware';
-import webpackConfig from '../../webpack.config';
+const express = require('express');
 
-import handleRender from './handleRender';
-
-const port = 8080;
+const port = process.env.PORT || 8080;
 const server = express();
-const compiler = webpack(webpackConfig);
 
-server.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: webpackConfig.output.publicPath }));
-server.use(webpackHotMiddleware(compiler));
-server.use(express.static('public'));
-server.get('/index.js', (req, res) => {
-    res.sendFile(path.join(__dirname, '../../built/index.js'));
-});
-server.get('/*', handleRender);
+if (process.env.NODE_ENV === 'development') {
+    const webpack = require('webpack');
+    const webpackDevMiddleware = require('webpack-dev-middleware');
+    const webpackHotMiddleware = require('webpack-hot-middleware');
+    const webpackHotServerMiddleware = require('webpack-hot-server-middleware');
+    const webpackConfig = require('../../webpack');
+    const compiler = webpack(webpackConfig);
+
+    server.use(webpackDevMiddleware(compiler));
+    server.use(webpackHotMiddleware(compiler.compilers.find(c => c.name === 'client')));
+    server.use(webpackHotServerMiddleware(compiler));
+} else {
+    const serverRenderer = require('../../public/js/handleRender').default;
+
+    server.use(express.static('public'));
+    server.use(serverRenderer());
+}
 
 server.listen(port, () => {
     console.log(`Express listening on port ${port}!`);

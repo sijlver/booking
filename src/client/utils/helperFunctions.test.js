@@ -12,9 +12,9 @@ describe('helperFunctions', () => {
         expect(checkType(true)).toEqual('boolean');
     });
     it('changeFormatDate function', () => {
-        const dateStart = '2018-05-9';
+        const dateStart = '2018-05-09';
         const dateEnd = '2018-05-10';
-        const checkMonthDate = '2018-11-9';
+        const checkMonthDate = '2018-11-09';
 
         expect(changeFormatDate(new Date(dateStart))).toEqual(dateStart);
         expect(changeFormatDate(new Date(dateStart), 1)).toEqual(dateEnd);
