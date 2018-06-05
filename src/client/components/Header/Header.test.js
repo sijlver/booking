@@ -9,6 +9,6 @@ describe('Header', () => {
             <Header />
         );
 
-        expect(wrapper.find('NavLink').length).toBe(2)
+        expect(wrapper.find('NavLink').length).toBe(2);
     });
 });

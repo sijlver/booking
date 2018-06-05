@@ -19,9 +19,9 @@ const hotelsReducer = (state = initialState, action) => {
         return {...state, listHotels };
     }
     case hotelsConstants.RECEIVED_HOTEL: {
-        const { hotelInformation: { label } } = action.payload;
+        const { hotelInformation: { label, locationName, location: { lat, lon } } } = action.payload;
 
-        return {...state, hotelInformation: { label } };
+        return {...state, hotelInformation: { label, locationName, lat, lng: lon } };
     }
     case hotelsConstants.CHANGE_FILTER_NAMES: {
         const { searchName, dateStart, dateEnd, limit } = action.payload;

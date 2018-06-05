@@ -1,0 +1,23 @@
+.titleNameHotel {
+    font-size: 3rem;
+    margin: 0 0 1rem 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.titleLocationNameHotel {
+    font-size: 2rem;
+    margin: 0 0 8rem 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.mainContentWrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+.mainContentWrapper > div, .mainContentWrapper > div > div {
+    width: 45%!important;
+    height: 50%!important;
+}

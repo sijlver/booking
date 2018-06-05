@@ -1,0 +1,185 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Carousel should render self 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Carousel
+    id="29126"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "autoPlay": false,
+      "axis": "horizontal",
+      "centerMode": false,
+      "centerSlidePercentage": 80,
+      "children": Array [
+        <img
+          src="https://photo.hotellook.com/image_v2/limit/h29126_1/300/200.auto"
+        />,
+        <img
+          src="https://photo.hotellook.com/image_v2/limit/h29126_2/300/200.auto"
+        />,
+        <img
+          src="https://photo.hotellook.com/image_v2/limit/h29126_3/300/200.auto"
+        />,
+      ],
+      "dynamicHeight": false,
+      "emulateTouch": false,
+      "infiniteLoop": false,
+      "interval": 3000,
+      "onChange": [Function],
+      "onClickItem": [Function],
+      "onClickThumb": [Function],
+      "selectedItem": 0,
+      "showArrows": true,
+      "showIndicators": true,
+      "showStatus": true,
+      "showThumbs": true,
+      "statusFormatter": [Function],
+      "stopOnHover": true,
+      "swipeScrollTolerance": 5,
+      "swipeable": true,
+      "transitionTime": 350,
+      "useKeyboardArrows": false,
+      "verticalSwipe": "standard",
+      "width": "100%",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "https://photo.hotellook.com/image_v2/limit/h29126_1/300/200.auto",
+        "nodeType": "host",
+        "props": Object {
+          "src": "https://photo.hotellook.com/image_v2/limit/h29126_1/300/200.auto",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+      Object {
+        "instance": null,
+        "key": "https://photo.hotellook.com/image_v2/limit/h29126_2/300/200.auto",
+        "nodeType": "host",
+        "props": Object {
+          "src": "https://photo.hotellook.com/image_v2/limit/h29126_2/300/200.auto",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+      Object {
+        "instance": null,
+        "key": "https://photo.hotellook.com/image_v2/limit/h29126_3/300/200.auto",
+        "nodeType": "host",
+        "props": Object {
+          "src": "https://photo.hotellook.com/image_v2/limit/h29126_3/300/200.auto",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "autoPlay": false,
+        "axis": "horizontal",
+        "centerMode": false,
+        "centerSlidePercentage": 80,
+        "children": Array [
+          <img
+            src="https://photo.hotellook.com/image_v2/limit/h29126_1/300/200.auto"
+          />,
+          <img
+            src="https://photo.hotellook.com/image_v2/limit/h29126_2/300/200.auto"
+          />,
+          <img
+            src="https://photo.hotellook.com/image_v2/limit/h29126_3/300/200.auto"
+          />,
+        ],
+        "dynamicHeight": false,
+        "emulateTouch": false,
+        "infiniteLoop": false,
+        "interval": 3000,
+        "onChange": [Function],
+        "onClickItem": [Function],
+        "onClickThumb": [Function],
+        "selectedItem": 0,
+        "showArrows": true,
+        "showIndicators": true,
+        "showStatus": true,
+        "showThumbs": true,
+        "statusFormatter": [Function],
+        "stopOnHover": true,
+        "swipeScrollTolerance": 5,
+        "swipeable": true,
+        "transitionTime": 350,
+        "useKeyboardArrows": false,
+        "verticalSwipe": "standard",
+        "width": "100%",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "https://photo.hotellook.com/image_v2/limit/h29126_1/300/200.auto",
+          "nodeType": "host",
+          "props": Object {
+            "src": "https://photo.hotellook.com/image_v2/limit/h29126_1/300/200.auto",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        Object {
+          "instance": null,
+          "key": "https://photo.hotellook.com/image_v2/limit/h29126_2/300/200.auto",
+          "nodeType": "host",
+          "props": Object {
+            "src": "https://photo.hotellook.com/image_v2/limit/h29126_2/300/200.auto",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        Object {
+          "instance": null,
+          "key": "https://photo.hotellook.com/image_v2/limit/h29126_3/300/200.auto",
+          "nodeType": "host",
+          "props": Object {
+            "src": "https://photo.hotellook.com/image_v2/limit/h29126_3/300/200.auto",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

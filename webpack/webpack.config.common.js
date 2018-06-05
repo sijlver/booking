@@ -5,6 +5,7 @@ const isDevMod = process.env.NODE_ENV === 'development';
 
 module.exports = {
   mode: process.env.NODE_ENV,
+  devtool: isDevMod ? 'source-map' : '',
 
   output: {
     filename: 'js/[name].js',

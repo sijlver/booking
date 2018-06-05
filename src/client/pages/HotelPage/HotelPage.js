@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
+import { hotelsConstants } from '../../constants';
 import { hotelsActions } from '../../actions';
-import { BusyIndicator } from '../../components';
+import { BusyIndicator, Carousel, MapContainer } from '../../components';
+import './styles.css';
 
 class HotelPage extends Component {
     componentWillMount() {
@@ -12,11 +14,16 @@ class HotelPage extends Component {
         requestHotelInformation(id);
     }
     render() {
-        const { hotelInformation: { label }, busyIndicator } = this.props;
+        const { hotelInformation: { label, locationName, lat, lng }, match: { params: { id } }, busyIndicator } = this.props;
 
         return (
             <div>
-                <p>{label}</p>
+                <h1 className='titleNameHotel'>{label}</h1>
+                <h2 className='titleLocationNameHotel'>{locationName}</h2>
+                <div className='mainContentWrapper'>
+                    <Carousel id={id} />
+                    <MapContainer lat={lat} lng={lng} locationName={locationName} />
+                </div>
                 <BusyIndicator show={busyIndicator} />
             </div>
         );
@@ -26,6 +33,9 @@ class HotelPage extends Component {
 HotelPage.propTypes = {
     hotelInformation:  PropTypes.shape({
         label: PropTypes.string,
+        locationName: PropTypes.string,
+        lat: PropTypes.number,
+        lng: PropTypes.number,
     }),
     busyIndicator:  PropTypes.bool,
 };

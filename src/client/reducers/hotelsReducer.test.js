@@ -32,11 +32,24 @@ describe('hotelsReducer', () => {
         const action = {
             type: hotelsConstants.RECEIVED_HOTEL,
             payload: {
-                hotelInformation: {}
+                hotelInformation: {
+                    label: 'label',
+                    locationName: 'locationName',
+                    location: {
+                        lat: 'lat',
+                        lon: 'lon',
+                    },
+                },
             },
         };
+        const information = {
+            label: 'label',
+            locationName: 'locationName',
+            lat: 'lat',
+            lng: 'lon',
+        };
 
-        expect(hotelsReducer(initialState, action)).toEqual({ ...initialState, ...action.payload });
+        expect(hotelsReducer(initialState, action)).toEqual({ ...initialState, hotelInformation: { ...information } });
     });
     it('should return change filter names', () => {
         const action = {
