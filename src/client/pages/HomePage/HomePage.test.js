@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow  } from "enzyme";
+import { shallow } from 'enzyme';
 import jest from 'jest-mock';
 
 import { HomePage } from './HomePage';
@@ -13,10 +13,10 @@ describe('HomePage', () => {
             dateEnd: '11-12-1991',
             limit: '10',
             busyIndicator: true,
-            requestListHotels: jest.fn()
+            requestListHotels: jest.fn(),
         };
-        const wrapper = shallow (
-            <HomePage {...props} />
+        const wrapper = shallow(
+            <HomePage {...props} />,
         );
 
         expect(wrapper).toMatchSnapshot();

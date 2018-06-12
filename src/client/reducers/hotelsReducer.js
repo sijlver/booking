@@ -1,5 +1,4 @@
 import { hotelsConstants } from '../constants';
-import { hotelsActions } from '../actions';
 import helperFunction from '../utils';
 
 const initialState = {
@@ -16,17 +15,26 @@ const hotelsReducer = (state = initialState, action) => {
     case hotelsConstants.RECEIVED_HOTELS: {
         const { listHotels } = action.payload;
 
-        return {...state, listHotels };
+        return { ...state, listHotels };
     }
     case hotelsConstants.RECEIVED_HOTEL: {
         const { hotelInformation: { label, locationName, location: { lat, lon } } } = action.payload;
 
-        return {...state, hotelInformation: { label, locationName, lat, lng: lon } };
+        return {
+            ...state,
+            hotelInformation: {
+                label, locationName, lat, lng: lon,
+            },
+        };
     }
     case hotelsConstants.CHANGE_FILTER_NAMES: {
-        const { searchName, dateStart, dateEnd, limit } = action.payload;
+        const {
+            searchName, dateStart, dateEnd, limit,
+        } = action.payload;
 
-        return {...state, searchName, dateStart, dateEnd, limit };
+        return {
+            ...state, searchName, dateStart, dateEnd, limit,
+        };
     }
     default: {
         return state;

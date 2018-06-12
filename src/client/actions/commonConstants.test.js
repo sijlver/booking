@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { setBusyIndicator } from './commonActions';
 import { commonConstants } from '../constants';
 
@@ -8,7 +6,7 @@ describe('commonActions', () => {
         const action = {
             type: commonConstants.BUSY_INDICATOR,
             payload: {
-                busyIndicator: true
+                busyIndicator: true,
             },
         };
 

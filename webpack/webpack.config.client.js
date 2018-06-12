@@ -8,32 +8,32 @@ const common = require('./webpack.config.common');
 const isDevMod = process.env.NODE_ENV === 'development';
 
 module.exports = merge(common, {
-  name: 'client',
-  target: 'web',
+    name: 'client',
+    target: 'web',
 
-  entry: [
-    isDevMod && 'webpack-hot-middleware/client',
-    './src/client',
-  ].filter(Boolean),
+    entry: [
+        isDevMod && 'webpack-hot-middleware/client',
+        './src/client',
+    ].filter(Boolean),
 
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        include: /src/,
-        use: [
-          isDevMod ? 'style-loader' : MiniCssExtractPlugin.loader,
-          'css-loader',
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                include: /src/,
+                use: [
+                    isDevMod ? 'style-loader' : MiniCssExtractPlugin.loader,
+                    'css-loader',
+                ],
+            },
         ],
-      },
-    ],
-  },
+    },
 
-  plugins: [
-    !isDevMod && new CleanWebpackPlugin('./public', { root: path.resolve(__dirname, '../') }),
-    isDevMod && new webpack.HotModuleReplacementPlugin(),
-    new MiniCssExtractPlugin({
-      filename: 'css/[name].css',
-    }),
-  ].filter(Boolean),
+    plugins: [
+        !isDevMod && new CleanWebpackPlugin('./public', { root: path.resolve(__dirname, '../') }),
+        isDevMod && new webpack.HotModuleReplacementPlugin(),
+        new MiniCssExtractPlugin({
+            filename: 'css/[name].css',
+        }),
+    ].filter(Boolean),
 });

@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import HotelItem from './HotelItem';
@@ -11,7 +10,7 @@ function ListHotels(props) {
         <div className='listHotels'>
             <ul>
                 {
-                    listHotels.map((hotel) => (
+                    listHotels.map(hotel => (
                         <HotelItem key={hotel.id} {...hotel} />
                     ))
                 }

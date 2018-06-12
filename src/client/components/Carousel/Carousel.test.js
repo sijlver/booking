@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow  } from "enzyme";
+import { shallow } from 'enzyme';
 
 import Carousel from './Carousel';
 
@@ -8,8 +8,8 @@ describe('Carousel', () => {
         const props = {
             id: '29126',
         };
-        const wrapper = shallow (
-            <Carousel {...props} />
+        const wrapper = shallow(
+            <Carousel {...props} />,
         );
 
         expect(wrapper).toMatchSnapshot();

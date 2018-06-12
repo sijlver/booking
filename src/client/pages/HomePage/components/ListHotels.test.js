@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow  } from "enzyme";
+import { shallow } from 'enzyme';
 
 import ListHotels from './ListHotels';
 
@@ -9,11 +9,11 @@ describe('ListHotels', () => {
             listHotels: [{
                 locationName: 'Hurghada, Egypt',
                 id: '1',
-                label: 'Steigenberger Al Dau Beach Hotel'
-            }]
+                label: 'Steigenberger Al Dau Beach Hotel',
+            }],
         };
-        const wrapper = shallow (
-            <ListHotels {...props} />
+        const wrapper = shallow(
+            <ListHotels {...props} />,
         );
 
         expect(wrapper).toMatchSnapshot();

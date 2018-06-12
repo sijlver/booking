@@ -1,18 +1,17 @@
-import React from 'react';
 import thunk from 'redux-thunk';
 import configureMockStore from 'redux-mock-store';
-import "isomorphic-fetch";
+import 'isomorphic-fetch';
 
 import { getListHotels, getHotelInformation, receivedListHotels, receivedHotelInformation, changeFilterNames } from './hotelsActions';
 import { setBusyIndicator } from './commonActions';
-import { hotelsConstants, commonConstants } from '../constants';
+import { hotelsConstants } from '../constants';
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 
 describe('hotelsActions', () => {
     it('receivedListHotels function', () => {
-        const listHotels = [{"id": "4392297", "label": "Search-Me-Heart", "locationName": "Port Antonio, Jamaica"}];
+        const listHotels = [{ id: '4392297', label: 'Search-Me-Heart', locationName: 'Port Antonio, Jamaica' }];
         const action = {
             type: hotelsConstants.RECEIVED_HOTELS,
             payload: { listHotels },
@@ -36,7 +35,9 @@ describe('hotelsActions', () => {
         const limit = '10';
         const action = {
             type: hotelsConstants.CHANGE_FILTER_NAMES,
-            payload: { searchName, dateStart, dateEnd, limit },
+            payload: {
+                searchName, dateStart, dateEnd, limit,
+            },
         };
 
         expect(changeFilterNames(searchName, dateStart, dateEnd, limit)).toEqual(action);
@@ -54,7 +55,7 @@ describe('hotelsActions', () => {
     });
     it('getHotelInformation function', () => {
         const id = '1';
-        const store = mockStore({})
+        const store = mockStore({});
 
         store.dispatch(getHotelInformation(id));
         expect(store.getActions()[0]).toEqual(setBusyIndicator(true));

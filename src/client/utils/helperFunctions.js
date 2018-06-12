@@ -9,9 +9,9 @@ function checkType(value) {
     return Object.prototype.toString.call(value).slice(8, -1).toLowerCase();
 }
 
-function changeFormatDate(date, dayDiff=0) {
+function changeFormatDate(date, dayDiff = 0) {
     const year = date.getFullYear();
-    let month =  date.getMonth() + 1;
+    let month = date.getMonth() + 1;
     let day = date.getDate() + dayDiff;
 
     if (day < 10) {

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import { hotelsConstants } from '../../constants';
 import { hotelsActions } from '../../actions';
 import { BusyIndicator, Carousel, MapContainer } from '../../components';
 import './styles.css';
@@ -14,7 +13,11 @@ class HotelPage extends Component {
         requestHotelInformation(id);
     }
     render() {
-        const { hotelInformation: { label, locationName, lat, lng }, match: { params: { id } }, busyIndicator } = this.props;
+        const {
+            hotelInformation: {
+                label, locationName, lat, lng,
+            }, match: { params: { id } }, busyIndicator,
+        } = this.props;
 
         return (
             <div>
@@ -31,18 +34,16 @@ class HotelPage extends Component {
 }
 
 HotelPage.propTypes = {
-    hotelInformation:  PropTypes.shape({
+    hotelInformation: PropTypes.shape({
         label: PropTypes.string,
         locationName: PropTypes.string,
         lat: PropTypes.number,
         lng: PropTypes.number,
     }),
-    busyIndicator:  PropTypes.bool,
+    busyIndicator: PropTypes.bool,
 };
 
-HotelPage.fetchData = (dispatch, match) => {
-    return dispatch(hotelsActions.getHotelInformation(match.params.id))
-};
+HotelPage.fetchData = (dispatch, match) => dispatch(hotelsActions.getHotelInformation(match.params.id));
 
 const mapStateToProps = state => ({
     hotelInformation: state.hotelsReducer.hotelInformation,

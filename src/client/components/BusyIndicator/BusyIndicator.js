@@ -9,7 +9,7 @@ function BusyIndicator(props) {
     return (
         <span className={className} />
     );
-};
+}
 
 BusyIndicator.propTypes = {
     show: PropTypes.bool,

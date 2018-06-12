@@ -9,7 +9,7 @@ import { routes } from '../client/navigations';
 import store from '../client/store';
 import App from '../client/App';
 
-const render = (html) => (
+const render = html => (
     `<!DOCTYPE html>
     <html lang="en">
        <head>

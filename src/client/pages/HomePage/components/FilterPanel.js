@@ -14,14 +14,20 @@ class FilterPanel extends Component {
         minEndDate: helperFunction.changeFormatDate(new Date(), 1),
     }
     componentWillMount() {
-        const { searchName, dateStart, dateEnd, limit } = this.props;
+        const {
+            searchName, dateStart, dateEnd, limit,
+        } = this.props;
 
-        this.setState({ searchName, dateStart, dateEnd, limit });
+        this.setState({
+            searchName, dateStart, dateEnd, limit,
+        });
     }
     submitSearchHotels = (e) => {
         e.preventDefault();
-        const { requestListHotels, changeSearchName } = this.props;
-        const { searchName, dateStart, dateEnd, limit } = this.state;
+        const { requestListHotels } = this.props;
+        const {
+            searchName, dateStart, dateEnd, limit,
+        } = this.state;
 
         requestListHotels(searchName, dateStart, dateEnd, limit);
     }
@@ -35,7 +41,9 @@ class FilterPanel extends Component {
         this.setState(changeState);
     }
     render() {
-        const { searchName, dateStart, dateEnd, minStartDate, minEndDate, limit } = this.state;
+        const {
+            searchName, dateStart, dateEnd, minStartDate, minEndDate, limit,
+        } = this.state;
 
         return (
             <form onSubmit={this.submitSearchHotels} className='filterPanel'>

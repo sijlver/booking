@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount  } from "enzyme";
+import { mount } from 'enzyme';
 import jest from 'jest-mock';
 
 import { HotelPage } from './HotelPage';
@@ -9,17 +9,17 @@ describe('HotelPage', () => {
         const props = {
             busyIndicator: false,
             hotelInformation: {
-                label: 'Atlantis The Palm'
+                label: 'Atlantis The Palm',
             },
             match: {
                 params: {
-                    id: '1'
-                }
+                    id: '1',
+                },
             },
-            requestHotelInformation: jest.fn()
+            requestHotelInformation: jest.fn(),
         };
-        const wrapper = mount (
-            <HotelPage {...props} />
+        const wrapper = mount(
+            <HotelPage {...props} />,
         );
 
         expect(wrapper.prop('busyIndicator')).toBeFalsy();

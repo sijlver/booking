@@ -5,19 +5,19 @@ import PropTypes from 'prop-types';
 import { hotelsConstants } from '../../constants';
 import './styles.css';
 
-function Carousel (props) {
+function Carousel(props) {
     const { id } = props;
     const images = Array(3).fill(0);
 
     return (
-        <Slider> 
+        <Slider>
             {
                 images.map((value, index) => {
-                    const src = `${hotelsConstants.URL_HOTEL_PHOTO}${id}_${index+1}/300/200.auto`;
+                    const src = `${hotelsConstants.URL_HOTEL_PHOTO}${id}_${index + 1}/300/200.auto`;
 
                     return (
                         <img key={src} src={src} />
-                    )
+                    );
                 })
             }
         </Slider>

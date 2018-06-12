@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow  } from "enzyme";
+import { shallow } from 'enzyme';
 
 import MapContainer from './MapContainer';
 
@@ -10,9 +10,9 @@ describe('MapContainer', () => {
             lat: 12,
             lng: 12,
             locationName: 'Amora hotel',
-        }
-        const wrapper = shallow (
-            <MapContainer {...props} />
+        };
+        const wrapper = shallow(
+            <MapContainer {...props} />,
         );
 
         expect(wrapper).toMatchSnapshot();

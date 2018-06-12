@@ -9,7 +9,7 @@ const commonReducer = (state = initialState, action) => {
     case commonConstants.BUSY_INDICATOR: {
         const { busyIndicator } = action.payload;
 
-        return {...state, busyIndicator };
+        return { ...state, busyIndicator };
     }
     default: {
         return state;

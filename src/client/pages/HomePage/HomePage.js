@@ -9,7 +9,9 @@ import { hotelsActions } from '../../actions';
 import './styles.css';
 
 function HomePage(props) {
-    const { busyIndicator, listHotels, requestListHotels, searchName, dateStart, dateEnd, limit } = props;
+    const {
+        busyIndicator, listHotels, requestListHotels, searchName, dateStart, dateEnd, limit,
+    } = props;
 
     return (
         <div className='mainContent'>

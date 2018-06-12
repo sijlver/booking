@@ -4,29 +4,29 @@ const webpack = require('webpack');
 const isDevMod = process.env.NODE_ENV === 'development';
 
 module.exports = {
-  mode: process.env.NODE_ENV,
-  devtool: isDevMod ? 'source-map' : '',
+    mode: process.env.NODE_ENV,
+    devtool: isDevMod ? 'source-map' : '',
 
-  output: {
-    filename: 'js/[name].js',
-    path: path.resolve('./public'),
-  },
+    output: {
+        filename: 'js/[name].js',
+        path: path.resolve('./public'),
+    },
 
-  resolve: {
-    extensions: ['.js', '.jsx'],
-  },
+    resolve: {
+        extensions: ['.js', '.jsx'],
+    },
 
-  module: {
-    rules: [
-      {
-        test: /\.js?$/,
-        exclude: /node_modules/,
-        use: 'babel-loader',
-      },
+    module: {
+        rules: [
+            {
+                test: /\.js?$/,
+                exclude: /node_modules/,
+                use: 'babel-loader',
+            },
+        ],
+    },
+
+    plugins: [
+        isDevMod ? new webpack.NamedModulesPlugin() : new webpack.HashedModuleIdsPlugin(),
     ],
-  },
-
-  plugins: [
-    isDevMod ? new webpack.NamedModulesPlugin() : new webpack.HashedModuleIdsPlugin(),
-  ],
 };

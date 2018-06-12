@@ -22,7 +22,7 @@ describe('hotelsReducer', () => {
         const action = {
             type: hotelsConstants.RECEIVED_HOTELS,
             payload: {
-                listHotels: [{}]
+                listHotels: [{}],
             },
         };
 

@@ -5,7 +5,7 @@ function Field(props) {
     return (
         <input {...props} />
     );
-};
+}
 
 Field.propTypes = {
     type: PropTypes.string,
