@@ -1,6 +1,14 @@
+// @flow
 import { commonConstants } from '../constants';
 
-function setBusyIndicator(busyIndicator) {
+type TypesResultSetBusyIndicator = {
+    type: string,
+    payload: {
+        busyIndicator: boolean,
+    },
+};
+
+function setBusyIndicator(busyIndicator: boolean): TypesResultSetBusyIndicator {
     return { type: commonConstants.BUSY_INDICATOR, payload: { busyIndicator } };
 }
 

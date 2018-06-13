@@ -1,5 +1,35 @@
+// @flow
 import { hotelsConstants } from '../constants';
 import helperFunction from '../utils';
+
+type TypesStateHotelsReducer = {
+    searchName: string,
+    dateStart: Date,
+    dateEnd: Date,
+    limit: string,
+    listHotels: [],
+    hotelInformation: {
+        label: string,
+        locationName: string,
+        lat: number,
+        lng: number,
+    },
+};
+
+type TypesActionHotelsReducer = {
+    type: string,
+    payload: {
+        ...TypesStateHotelsReducer,
+        hotelInformation: {
+            label: string,
+            locationName: string,
+            location: {
+                lat: number,
+                lon: number,
+            },
+        }
+    },
+};
 
 const initialState = {
     searchName: '',
@@ -7,10 +37,15 @@ const initialState = {
     dateEnd: helperFunction.changeFormatDate(new Date(), 1),
     limit: '10',
     listHotels: [],
-    hotelInformation: {},
+    hotelInformation: {
+        label: '',
+        locationName: '',
+        lat: 0,
+        lng: 0,
+    },
 };
 
-const hotelsReducer = (state = initialState, action) => {
+const hotelsReducer = (state: TypesStateHotelsReducer = initialState, action: TypesActionHotelsReducer): TypesStateHotelsReducer => {
     switch (action.type) {
     case hotelsConstants.RECEIVED_HOTELS: {
         const { listHotels } = action.payload;
